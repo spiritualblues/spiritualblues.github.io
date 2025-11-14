@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>spi.blue — Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Simple link hub for spi.blue" />
+  <style>
+    :root {
+      --bg-color: #050816;
+      --card-bg: #111827;
+      --accent: #3b82f6;
+      --accent-soft: rgba(59, 130, 246, 0.12);
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --border-subtle: rgba(148, 163, 184, 0.25);
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.75);
+      --radius-card: 18px;
+      --radius-pill: 999px;
+      --max-width: 480px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000 100%);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: var(--max-width);
+    }
+
+    .card {
+      background: linear-gradient(135deg, #020617 0%, #020617 40%, #020617 60%, #020617 100%);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      padding: 24px 20px 18px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .avatar {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(148, 163, 184, 0.5);
+      margin: 4px auto 16px;
+      display: block;
+    }
+
+    .name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      margin-bottom: 4px;
+    }
+
+    .tagline {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 0 auto 10px;
+    }
+
+    .link-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 16px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-subtle);
+      text-decoration: none;
+      color: var(--text-main);
+      font-size: 0.96rem;
+      font-weight: 500;
+      background: rgba(15, 23, 42, 0.9);
+      transition:
+        transform 0.12s ease-out,
+        box-shadow 0.12s ease-out,
+        border-color 0.12s ease-out,
+        background-color 0.12s ease-out;
+    }
+
+    .link-button span {
+      opacity: 0.96;
+    }
+
+    .link-button:hover,
+    .link-button:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.75);
+      border-color: rgba(129, 140, 248, 0.7);
+      background: radial-gradient(circle at top, #111827 0, #020617 55%);
+      outline: none;
+    }
+
+    .link-button.primary {
+      border-color: rgba(59, 130, 246, 0.85);
+      background: radial-gradient(circle at top, rgba(59, 130, 246, 0.22), #020617 55%);
+    }
+
+    .link-note {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .footer {
+      margin-top: 10px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      opacity: 0.8;
+    }
+
+    .footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(148, 163, 184, 0.5);
+    }
+
+    .footer a:hover {
+      color: var(--text-main);
+      border-bottom-style: solid;
+    }
+
+    @media (min-width: 640px) {
+      body {
+        padding: 40px 16px;
+      }
+      .card {
+        padding: 28px 26px 22px;
+      }
+      .name {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <main class="card">
+      <!-- Replace avatar.jpg with your own image file in the same folder -->
+      <!-- Or remove this <img> if you don't want an avatar -->
+      <img src="avatar.jpg" alt="Profile photo" class="avatar" />
+
+      <!-- Edit your name + tagline here -->
+      <h1 class="name">Gaurav Bansode</h1>
+      <p class="tagline">Medicine · Economics · Writing · Internet rabbit holes</p>
+
+      <section class="links" aria-label="Main links">
+        <!-- Top / main link -->
+        <a class="link-button primary" href="https://blog.spi.blue" target="_blank" rel="noopener">
+          <span>Read the blog</span>
+        </a>
+
+        <!-- Add / edit / remove any of these link buttons -->
+        <a class="link-button" href="https://bansode.com" target="_blank" rel="noopener">
+          <span>Professional site</span>
+        </a>
+
+        <a class="link-button" href="https://medium.com/@your-handle" target="_blank" rel="noopener">
+          <span>Medium essays</span>
+        </a>
+
+        <a class="link-button" href="mailto:you@spi.blue">
+          <span>Email me</span>
+        </a>
+
+        <a class="link-button" href="https://x.com/your-handle" target="_blank" rel="noopener">
+          <span>Twitter / X</span>
+        </a>
+
+        <a class="link-button" href="https://github.com/spiritualblues" target="_blank" rel="noopener">
+          <span>GitHub</span>
+        </a>
+      </section>
+
+      <p class="footer">
+        Built on <a href="https://spi.blue">spi.blue</a>
+      </p>
+    </main>
+  </div>
+</body>
+</html>
